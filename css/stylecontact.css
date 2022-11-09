@@ -1,0 +1,191 @@
+body {
+  background: grey;
+  font-family: Montserrat, "sans-serif";
+  display: flex;
+  justify-content: center;
+  color: #303030;
+}
+
+.contactez-nous {
+  width: 700px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0 50px 0 50px;
+  background: white;
+}
+
+.contactez-nous > h1 {
+  font-weight: 500;
+}
+
+.contactez-nous > p {
+  font-weight: 300;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 83px;
+  margin-top: 25px;
+}
+
+form div > label {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+form div > input, form div > select, form div > textarea {
+  background: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Montserrat, "sans-serif";
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+form div > input, form div > select {
+  height: 50px;
+  padding-left: 10px;
+}
+
+form div > select {
+  appearance: none;
+  background: white;
+}
+
+form div > textarea {
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+}
+
+form div > input::placeholder, form div > textarea::placeholder {
+  color: black;
+}
+
+form div > select:invalid {
+  color: black;
+}
+
+form div > select option {
+  background: white;
+  color: #303030;
+}
+
+form div:last-child {
+  align-items: center;
+  margin-top: 20px;
+}
+
+form button {
+  width: 450px;
+  max-width: 500px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 28px;
+  background: white;
+  border: rgba(48, 48, 48, 0.5) solid 1px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #303030;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: grey;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+}
+
+button {
+  padding: 20px 0;
+  width: 240px;
+  background: none;
+  border-radius: 40px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border: 3px solid black;
+  position: relative;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  background: red;
+}
+button:hover .c1 {
+  animation: pulse 0.4s ease-out alternate 6;
+}
+button:hover .c2 {
+  animation: pulse 0.4s ease-out 0.2s alternate 6;
+}
+button:hover .c3 {
+  animation: pulse 0.4s ease-out 0.4s alternate 6;
+}
+button:hover .text {
+  opacity: 0;
+}
+button:hover .endtext {
+  animation: fadeIn 0.25s cubic-bezier(0.56, 0.12, 0.73, 1.39) 2.9s forwards;
+}
+
+.text {
+  transition: all 0.2s ease;
+}
+
+.endtext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transform-origin: 50% 50%;
+  color: black;
+}
+
+.circles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  40% {
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}/*# sourceMappingURL=stylecontact.css.map */
